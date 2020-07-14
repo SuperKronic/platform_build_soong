@@ -222,7 +222,7 @@ func runMakeProductConfig(ctx Context, config Config) {
 	config.SetTargetDeviceDir(make_vars["TARGET_DEVICE_DIR"])
 
 	config.SetPdkBuild(make_vars["TARGET_BUILD_PDK"] == "true")
-	config.SetBuildBrokenDupRules(make_vars["BUILD_BROKEN_DUP_RULES"] == "true")
+	config.SetBuildBrokenDupRules(make_vars["BUILD_BROKEN_DUP_RULES"] == "true" || env.IsEnvTrue("BUILD_BROKEN_DUP_RULES"))
 	config.SetBuildBrokenPhonyTargets(make_vars["BUILD_BROKEN_PHONY_TARGETS"] == "true")
 	config.SetBuildBrokenUsesNetwork(make_vars["BUILD_BROKEN_USES_NETWORK"] == "true")
 }
