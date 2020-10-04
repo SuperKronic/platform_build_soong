@@ -95,6 +95,8 @@ var Configuration = map[string]PathConfig{
 	"sh":      Allowed,
 	"tr":      Allowed,
 	"unzip":   Allowed,
+	"arm-linux-androidkernel-as":         Allowed,
+	"arm-linux-androidkernel-ld":         Allowed,
 	"zip":     Allowed,
 
 	// Host toolchain is removed. In-tree toolchain should be used instead.
